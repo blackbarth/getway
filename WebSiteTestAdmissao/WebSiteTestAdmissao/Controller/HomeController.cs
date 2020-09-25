@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using WebSiteTestAdmissao.Autorizacao;
 using WebSiteTestAdmissao.Model;
 
@@ -53,7 +49,7 @@ namespace WebSiteTestAdmissao.Controller
         {
             return View();
         }
-        // POST: Pessoa/Create
+        // POST: Home/Novo
         [HttpPost]
         public ActionResult Novo(Usuario usuario)
         {
@@ -68,7 +64,7 @@ namespace WebSiteTestAdmissao.Controller
             }
         }
 
-        // GET: Pessoa/Edit/5
+        // GET: Home/Editar/5
         public ActionResult Editar(int codigo)
         {
             var user = respository.GetById(codigo);
@@ -81,7 +77,7 @@ namespace WebSiteTestAdmissao.Controller
             return View(user);
         }
 
-        // POST: Pessoa/Edit/5
+        // POST: Home/Editar/5
         [HttpPost]
         public ActionResult Editar(Usuario usuario)
         {
@@ -96,7 +92,7 @@ namespace WebSiteTestAdmissao.Controller
             }
         }
 
-        // POST: Pessoa/Delete/5
+        // POST: Home/Excluir/5
         [HttpPost]
         public ActionResult Excluir(int codigo)
         {
