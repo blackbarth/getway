@@ -19,6 +19,7 @@ namespace WebSiteTestAdmissao.Controller
             _loginUser = login;
         }
         // GET: Home
+        [AutorizacaoUsuario]
         public ActionResult Index()
         {
             return View(respository.GetAll());
