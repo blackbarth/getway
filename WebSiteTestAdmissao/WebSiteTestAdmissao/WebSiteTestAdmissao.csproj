@@ -143,6 +143,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Autorizacao\Autorizacao.cs" />
+    <Compile Include="Autorizacao\LoginUser.cs" />
+    <Compile Include="Autorizacao\Sessoes.cs" />
     <Compile Include="Controller\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
