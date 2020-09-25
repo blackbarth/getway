@@ -35,8 +35,8 @@
             @Html.DisplayFor(modelItem => item.Senha)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Editar", new { codigo=item.Codigo}) |
-            @Html.ActionLink("Excluir", "Excluir", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Editar", "Editar", new { id=item.Codigo}) |
+            @Html.ActionLink("Excluir", "Excluir", new { id = item.Codigo })
         </td>
     </tr>
 }

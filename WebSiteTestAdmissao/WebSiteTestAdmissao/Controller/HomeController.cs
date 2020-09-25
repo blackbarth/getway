@@ -11,13 +11,8 @@ namespace WebSiteTestAdmissao.Controller
     public class HomeController : System.Web.Mvc.Controller
     {
         private UserRepository respository = new UserRepository();
-        private readonly LoginUser _loginUser;
 
 
-        public HomeController(LoginUser login)
-        {
-            _loginUser = login;
-        }
         // GET: Home
         [AutorizacaoUsuario]
         public ActionResult Index()
@@ -32,17 +27,19 @@ namespace WebSiteTestAdmissao.Controller
         [HttpPost]
         public ActionResult Login(Usuario usuario)
         {
+
             if (ModelState.IsValid)
             {
                 var login = respository.LoginUser(usuario.Nome, usuario.Senha);
-              
+
                 if (login != null)
                 {
+                    LoginUser _loginUser = new LoginUser();
                     _loginUser.Salvar(login);
                     return RedirectToAction("Index");
 
                 }
-                 
+
                 else return View(usuario);
             }
             else
