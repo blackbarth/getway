@@ -16,6 +16,7 @@ namespace WebSiteTestAdmissao.Model
         [MinLength(6,ErrorMessage = "Senha precisa ter no minimo 6 caracteres")]
         [Required(ErrorMessage = "O Senha do usuário é obrigatório", AllowEmptyStrings = false)]
         [PasswordPropertyText]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
     }
 }
