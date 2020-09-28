@@ -65,9 +65,9 @@ namespace WebSiteTestAdmissao.Controller
         }
 
         // GET: Home/Editar/5
-        public ActionResult Editar(int codigo)
+        public ActionResult Editar(int id)
         {
-            var user = respository.GetById(codigo);
+            var user = respository.GetById(id);
 
             if (user == null)
             {
@@ -94,9 +94,9 @@ namespace WebSiteTestAdmissao.Controller
 
         // POST: Home/Excluir/5
         [HttpPost]
-        public ActionResult Excluir(int codigo)
+        public ActionResult Excluir(int id)
         {
-            respository.DeleteById(codigo);
+            respository.DeleteById(id);
             return Json(respository.GetAll());
         }
     }
